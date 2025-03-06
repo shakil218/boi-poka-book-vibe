@@ -7,7 +7,7 @@ const Navbar = () => {
         <NavLink to={"/"}>Home</NavLink>
       </li>
       <li>
-        <NavLink to={"/gf"}>Listed Books</NavLink>
+        <NavLink to={"/listedBooks"}>Listed Books</NavLink>
       </li>
       <li>
         <NavLink to={"/dr"}>Pages to Read</NavLink>
@@ -46,7 +46,7 @@ const Navbar = () => {
         <a className="btn btn-ghost text-xl">Book Vibe</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 ">{links}</ul>
+        <ul className="menu menu-horizontal px-1 gap-2">{links}</ul>
       </div>
       <div className="navbar-end flex gap-3 ">
         <a className="btn bg-[#23BE0A] text-white rounded-lg">Sign In</a>
