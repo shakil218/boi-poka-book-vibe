@@ -3,8 +3,8 @@ import { useLoaderData } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { getStoredReadList, getStoredWishList } from "../../Utilities/addToDb";
-import Book from "../Book/Book";
 import { IoIosArrowDown } from "react-icons/io";
+import ListedBook from "../ListedBook/ListedBook";
 
 const ListedBooks = () => {
   const [readList, setReadList] = useState([]);
@@ -53,14 +53,14 @@ const ListedBooks = () => {
           <TabPanel>
             <div className="flex flex-col gap-5 ">
               {readList.map((book) => (
-                <Book key={book.bookId} book={book}></Book>
+                <ListedBook key={book.bookId} book={book}></ListedBook>
               ))}
             </div>
           </TabPanel>
           <TabPanel>
             <div className="flex flex-col gap-5 ">
               {wishList.map((book) => (
-                <Book key={book.bookId} book={book}></Book>
+                <ListedBook key={book.bookId} book={book}></ListedBook>
               ))}
             </div>
           </TabPanel>
