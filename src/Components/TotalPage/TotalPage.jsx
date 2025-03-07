@@ -1,22 +1,10 @@
 import React from "react";
-// import { MdStarOutline } from "react-icons/md";
-// import { Link } from "react-router-dom";
 import { RiGroupLine } from "react-icons/ri";
 import { HiOutlineDocumentChartBar } from "react-icons/hi2";
 import { IoLocationOutline } from "react-icons/io5";
 
-const ListedBook = ({ book }) => {
-  const {
-    bookName,
-    author,
-    image,
-    rating,
-    category,
-    tags,
-    totalPages,
-    publisher,
-    yearOfPublishing,
-  } = book;
+const TotalPage = ({ book }) => {
+  const { bookName, author, image, rating, category, tags,yearOfPublishing,publisher,totalPages } = book;
   return (
     <div className="hero ">
       <div className="hero-content flex-row  min-w-full h-[277px] border border-gray-300 rounded-2xl">
@@ -39,11 +27,19 @@ const ListedBook = ({ book }) => {
                 # {tag}
               </div>
             ))}
-            <p className="flex items-center gap-1"><IoLocationOutline></IoLocationOutline>Year of Publishing: {yearOfPublishing}</p>
+            <p className="flex items-center gap-1">
+              <IoLocationOutline></IoLocationOutline>Year of Publishing:{" "}
+              {yearOfPublishing}
+            </p>
           </div>
-          <div  className="flex gap-5">
-            <p className="flex items-center gap-1"><RiGroupLine></RiGroupLine>Publisher: {publisher}</p>
-            <p className="flex items-center gap-1"><HiOutlineDocumentChartBar></HiOutlineDocumentChartBar>Page {totalPages}</p>
+          <div className="flex gap-5">
+            <p className="flex items-center gap-1">
+              <RiGroupLine></RiGroupLine>Publisher: {publisher}
+            </p>
+            <p className="flex items-center gap-1">
+              <HiOutlineDocumentChartBar></HiOutlineDocumentChartBar>Page{" "}
+              {totalPages}
+            </p>
           </div>
           <div className="border-t-1 border-dashed border-gray-300 my-3"></div>
           <div className="flex gap-5">
@@ -63,4 +59,4 @@ const ListedBook = ({ book }) => {
   );
 };
 
-export default ListedBook;
+export default TotalPage;
